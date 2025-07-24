@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f111a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #58a6ff;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.filter-label input {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #1c1f2b;
+    color: #fff;
+    width: 300px;
+}
+
+.fissure-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fissure-card {
+    background: #1f2333;
+    border-left: 4px solid #58a6ff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fissure-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+}
+
+.info-text {
+    color: #bbb;
+}
+
+.error-text {
+    color: #ff6b6b;
+}
+
+.update-banner {
+    background: #003300;
+    border: 1px solid #00cc00;
+    padding: 10px;
+    border-radius: 6px;
+    color: #ccffcc;
+    margin-bottom: 15px;
+    cursor: pointer;
+    max-width: 400px;
+    transition: background 0.3s ease;
+}
+
+.update-banner:hover {
+    background: #004d00;
+}
