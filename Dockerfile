@@ -13,11 +13,11 @@ RUN npm run build
 # Use Nginx to serve the static files
 FROM nginx:alpine
 
-# Copy the built frontend from the builder
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy the built frontend from the builder (corrected folder: build)
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Expose port
-EXPOSE 3000
+# Expose port 80 (default for nginx)
+EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
