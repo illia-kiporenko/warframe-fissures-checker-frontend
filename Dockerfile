@@ -2,20 +2,10 @@
 FROM node:22.14.0 AS build
 
 WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
 COPY . .
-RUN npm run build
+RUN npm install && npm run build
 
-# Stage 2: Serve the build with Nginx
-FROM nginx:alpine
+FROM nginx:stable-alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+EXPOSE 3000
 
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Optional: custom Nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 6060
-CMD ["nginx", "-g", "daemon off;"]
