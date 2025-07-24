@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./LongPollingFissures.css"; // Add this line if using external CSS
 
-const API_BASE = "http://ec2-3-66-198-21.eu-central-1.compute.amazonaws.com:5050/fissures";
+const API_BASE = "http://localhost:5050/fissures";
 
 function LongPollingFissures() {
     const [missionType, setMissionType] = useState("");
